@@ -18,7 +18,7 @@ internal class Program
         System.Console.WriteLine($"SomeVariable: {builder.Configuration.GetValue<string>("SomeVariable")}");
 
         var app = builder.Build();
-        app.UseSwaggerForOcelotUI(opt => { });
+        app.UseSwaggerForOcelotUI();
         app.UseOcelot().Wait();
 
         // Configure the HTTP request pipeline.
