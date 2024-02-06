@@ -1,0 +1,50 @@
+{
+  "Routes": [
+    {
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/serviceone",
+      "DownstreamPathTemplate": "/api/one",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5116
+        }
+      ],
+      "SwaggerKey": "serviceone"
+    },
+    {
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/servicetwo",
+      "DownstreamPathTemplate": "/api/two",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5280
+        }
+      ],
+      "SwaggerKey": "servicetwo"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "serviceone",
+      "Config": [
+        {
+          "Name": "Service One",
+          "Version": "v1",
+          "Url": "http://localhost:5116/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "servicetwo",
+      "Config": [
+        {
+          "Name": "Service Two",
+          "Version": "v1",
+          "Url": "http://localhost:5280/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
